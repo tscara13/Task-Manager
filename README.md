@@ -1,20 +1,10 @@
-# TaskFlow
+# TaskFlow v2
 
-Web app statica per gestire task e visualizzarli in un Gantt, separati per progetto. Funziona su PC e iPhone tramite GitHub Pages.
+## Novità
+- Filtri per progetto, status, tipo, container, priorità, component e intervallo date.
+- Status, tipo, container, priorità e component accettano più tag.
+- I tag inseriti diventano suggerimenti riutilizzabili nei task successivi.
+- Migrazione automatica dei dati locali della v1.
 
-## Pubblicazione su GitHub Pages
-1. Crea un repository pubblico su GitHub.
-2. Carica nella root: `index.html`, `manifest.json`, `sw.js`.
-3. Apri **Settings > Pages**.
-4. In **Build and deployment**, scegli **Deploy from a branch**.
-5. Seleziona `main` e `/ (root)`, poi **Save**.
-6. Apri l'URL indicato da GitHub Pages.
-
-## iPhone
-Apri il sito in Safari, tocca **Condividi**, quindi **Aggiungi alla schermata Home**.
-
-## Dati e backup
-I dati sono salvati nel `localStorage` del singolo browser/dispositivo. Usa **Esporta JSON** e **Importa JSON** per backup o trasferimenti. Questa versione non sincronizza automaticamente PC e iPhone.
-
-## Evoluzione consigliata
-Per sincronizzazione multi-dispositivo, aggiungere Supabase (autenticazione + database PostgreSQL) mantenendo GitHub Pages come frontend.
+## Aggiornamento GitHub Pages
+Sostituisci `index.html`, `manifest.json` e `sw.js` nella stessa cartella pubblicata (`/root` oppure `/docs`) e fai Commit. Non cancellare i dati del browser: la v2 usa la stessa chiave locale della v1.
